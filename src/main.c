@@ -2,11 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char argv[]) {
-    if (argc != 2) {
-        fprintf(stderr, "Usage: %s <downloads_path>\n", argv[0]);
-        return EXIT_FAILURE;
-    }
+int main(void) 
+{
+    char downloads_path[MAX_PATH];
+    get_downloads_path(downloads_path, sizeof(downloads_path));
 
     printf("Using downloads path: %s\n", downloads_path);
 
