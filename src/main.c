@@ -8,7 +8,6 @@ int main(int argc, char argv[]) {
         return EXIT_FAILURE;
     }
 
-    const char *downloads_path = argv[1];
     printf("Using downloads path: %s\n", downloads_path);
 
 
