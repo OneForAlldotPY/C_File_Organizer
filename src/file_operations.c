@@ -7,7 +7,7 @@ void move_file(const char *filename, const char *downloads_path){
     snprintf(source_path, sizeof(source_path), "%s\\%s", downloads_path, filename);
 
     const char *destination_subdir = NULL;
-    if (strstr(filename, ".jpg") || strstr(filename, ".gif") || strstr(filename, ".jpeg")) 
+    if (strstr(filename, ".jpg") || strstr(filename, ".gif") || strstr(filename, ".jpeg") || strstr(filename, ".png")) 
     {
         destination_subdir = "Downloaded_Images";
     } else if (strstr(filename, ".mp4") || strstr(filename, ".mkv") || strstr(filename, ".avi"))
@@ -19,6 +19,9 @@ void move_file(const char *filename, const char *downloads_path){
     } else if (strstr(filename, ".rar") || strstr(filename, ".zip") || strstr(filename, ".tar"))
     {
         destination_subdir = "Downloaded_CompressedFiles";
+    } else if (strstr(filename, ".html") || strstr(filename, ".htm") || strstr (filename, ".asp") || strstr(filename, ".aspx"))
+    {
+        destination_subdir = "Downloaded_WebPages";
     }
 
     if (destination_subdir) {
