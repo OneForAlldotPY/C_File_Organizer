@@ -13,7 +13,13 @@ void move_file(const char *filename, const char *downloads_path){
     } else if (strstr(filename, ".mp4") || strstr(filename, ".mkv") || strstr(filename, ".avi"))
     {
         destination_subdir = "Downloaded_Videos";
-    } 
+    } else if (strstr(filename, ".mp3") || strstr(filename, ".wma") || strstr(filename, ".wav"))
+    {
+        destination_subdir = "Downloaded_Audios";
+    } else if (strstr(filename, ".rar") || strstr(filename, ".zip") || strstr(filename, ".tar"))
+    {
+        destination_subdir = "Downloaded_CompressedFiles";
+    }
 
     if (destination_subdir) {
         char destination_path[MAX_PATH];

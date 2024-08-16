@@ -14,12 +14,15 @@ int main(void)
     char images_path[MAX_PATH];
     char videos_path[MAX_PATH];
     char audios_path[MAX_PATH];
+    char tar_path[MAX_PATH];
     snprintf(images_path, sizeof(images_path), "%s\\Downloaded_Images", downloads_path);
     snprintf(videos_path, sizeof(videos_path), "%s\\Downloaded_Videos", downloads_path);
     snprintf(audios_path, sizeof(audios_path), "%s\\Downloaded_Audios", downloads_path);
+    snprintf(tar_path, sizeof(tar_path), "%s\\Downloaded_CompressedFiles", downloads_path);
     check_create_directories(images_path);
     check_create_directories(videos_path);
     check_create_directories(audios_path);
+    check_create_directories(tar_path);
 
     //3 Core logic 
 
