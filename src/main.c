@@ -28,7 +28,7 @@ int main(void)
     snprintf(web_path, sizeof(web_path), "%s\\Downloaded_WebPages", downloads_path);
     snprintf(spreadsheets_path, sizeof(spreadsheets_path), "%s\\Downloaded_Spreadsheets", downloads_path);
     snprintf(documents_path, sizeof(documents_path), "%s\\Downloaded_Documents", downloads_path); 
-    snprintf(icons_path, sizeof(icons_path), "%s\\Downloaded_Graphs&Icons", downloads_path);
+    snprintf(icons_path, sizeof(icons_path), "%s\\Downloaded_Graphicss&Icons", downloads_path);
     snprintf(giui_path, sizeof(giui_path), "%s\\Downloaded_GIUIApplications");
     snprintf(cli_path, sizeof(cli_path), "%s\\Downloaded_CLIApplications", downloads_path);
     check_create_directories(images_path);
