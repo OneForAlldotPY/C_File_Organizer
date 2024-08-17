@@ -22,11 +22,14 @@ void move_file(const char *filename, const char *downloads_path){
     } else if (strstr(filename, ".html") || strstr(filename, ".htm") || strstr (filename, ".asp") || strstr(filename, ".aspx"))
     {
         destination_subdir = "Downloaded_WebPages";
-    } else if (strstr(filename, ".xls") || strstr(filename, "xlsx") || strstr (filename, ".csv") || strstr(filename, ".ods"))
+    } else if (strstr(filename, ".xls") || strstr(filename, ".xlsx") || strstr (filename, ".csv") || strstr(filename, ".ods"))
     {
         destination_subdir = "Downloaded_Spreadsheets";
+    } else if (strstr(filename, ".pdf") || strstr(filename, ".doc") || strstr (filename, ".docx") || strstr(filename, ".rtf") || strstr (filename, ".txt"))
+    {
+        destination_subdir = "Downlaoded_Documents"; 
     }
-
+    
     if (destination_subdir) {
         char destination_path[MAX_PATH];
 
