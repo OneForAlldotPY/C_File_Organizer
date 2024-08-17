@@ -27,7 +27,7 @@ void move_file(const char *filename, const char *downloads_path){
         destination_subdir = "Downloaded_Spreadsheets";
     } else if (strstr(filename, ".pdf") || strstr(filename, ".doc") || strstr (filename, ".docx") || strstr(filename, ".rtf") || strstr (filename, ".txt"))
     {
-        destination_subdir = "Downlaoded_Documents"; 
+        destination_subdir = "Downloaded_Documents"; 
     }
     
     if (destination_subdir) {
