@@ -16,6 +16,7 @@ int main(void)
     char audios_path[MAX_PATH];
     char tar_path[MAX_PATH];
     char web_path[MAX_PATH];
+    char spreadsheets_path[MAX_PATH];
     snprintf(images_path, sizeof(images_path), "%s\\Downloaded_Images", downloads_path);
     snprintf(videos_path, sizeof(videos_path), "%s\\Downloaded_Videos", downloads_path);
     snprintf(audios_path, sizeof(audios_path), "%s\\Downloaded_Audios", downloads_path);
@@ -26,6 +27,7 @@ int main(void)
     check_create_directories(audios_path);
     check_create_directories(tar_path);
     check_create_directories(web_path);
+    check_create_directories(spreadsheets_path);
 
     //3 Core logic 
 
