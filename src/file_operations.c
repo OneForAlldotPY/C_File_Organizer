@@ -34,6 +34,9 @@ void move_file(const char *filename, const char *downloads_path){
     } else if (strstr(filename, ".exe") ||  strstr(filename, ".app") ||strstr(filename, ".apk"))
     {
         destination_subdir = "Downloaded_GIUIApplications";
+    } else if (strstr(filename, ".bat") || strstr(filename, ".cmd") || strstr(filename, ".sh") || strstr(filename, ".ps1") || strstr(filename, ".pl"))
+    {
+        destination_subdir = "Dowanloaded_CLIApplications";
     }
     
     if (destination_subdir) {
