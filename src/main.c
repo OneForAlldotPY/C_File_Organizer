@@ -19,6 +19,7 @@ int main(void)
     char spreadsheets_path[MAX_PATH];
     char documents_path[MAX_PATH];
     char icons_path[MAX_PATH];
+    char giui_path[MAX_PATH];
     snprintf(images_path, sizeof(images_path), "%s\\Downloaded_Images", downloads_path);
     snprintf(videos_path, sizeof(videos_path), "%s\\Downloaded_Videos", downloads_path);
     snprintf(audios_path, sizeof(audios_path), "%s\\Downloaded_Audios", downloads_path);
@@ -27,6 +28,7 @@ int main(void)
     snprintf(spreadsheets_path, sizeof(spreadsheets_path), "%s\\Downloaded_Spreadsheets", downloads_path);
     snprintf(documents_path, sizeof(documents_path), "%s\\Downloaded_Documents", downloads_path); 
     snprintf(icons_path, sizeof(icons_path), "%s\\Downloaded_Graphs&Icons", downloads_path);
+    snprintf(giui_path, sizeof(giui_path), "%s\\Downloaded_GIUIApplications");
     check_create_directories(images_path);
     check_create_directories(videos_path);
     check_create_directories(audios_path);
@@ -35,6 +37,7 @@ int main(void)
     check_create_directories(spreadsheets_path);
     check_create_directories(documents_path);
     check_create_directories(icons_path); 
+    check_create_directories(giui_path);
     //3 Core logic 
 
     organize_downloads(downloads_path);
