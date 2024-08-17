@@ -28,6 +28,9 @@ void move_file(const char *filename, const char *downloads_path){
     } else if (strstr(filename, ".pdf") || strstr(filename, ".doc") || strstr (filename, ".docx") || strstr(filename, ".rtf") || strstr (filename, ".txt"))
     {
         destination_subdir = "Downloaded_Documents"; 
+    } else if (strstr(filename, ".svg") || strstr(filename, ".eps") || strstr (filename, ".ai"));
+    {
+        destination_subdir = "Downloaded_Graphics&Icons";
     }
     
     if (destination_subdir) {
