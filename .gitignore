@@ -1,0 +1,17 @@
+#Ignoring exe file
+*.exe
+
+#Ignore object files and libraries
+*.o
+*.a
+*.so
+*.dll
+
+#Ignoring IDE files
+.vscode/
+.build/
+
+
+#Ignoring OS files
+.DS_STORE
+Thumbs.db
