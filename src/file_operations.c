@@ -30,13 +30,13 @@ void move_file(const char *filename, const char *downloads_path){
         destination_subdir = "Downloaded_Documents"; 
     } else if (strstr(filename, ".svg") || strstr(filename, ".eps") || strstr (filename, ".ai"))
     {
-        destination_subdir = "Downloaded_Graphics&Icons";
+        destination_subdir = "Downloaded_Icons";
     } else if (strstr(filename, ".exe") ||  strstr(filename, ".app") ||strstr(filename, ".apk"))
     {
         destination_subdir = "Downloaded_GIUIApplications";
-    } else if (strstr(filename, ".bat") || strstr(filename, ".cmd") || strstr(filename, ".sh") || strstr(filename, ".ps1") || strstr(filename, ".pl"))
+    } else if (strstr(filename, ".bat") || strstr(filename, ".cmd") || strstr(filename, ".sh") || strstr(filename, ".ps1") || strstr(filename, ".pl") || strstr(filename, ".plist"))
     {
-        destination_subdir = "Dowanloaded_CLIApplications";
+        destination_subdir = "Downloaded_CLIApplications";
     }
     
     if (destination_subdir) {
