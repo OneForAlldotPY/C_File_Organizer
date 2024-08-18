@@ -10,7 +10,7 @@ void move_file(const char *filename, const char *downloads_path){
     if (strstr(filename, ".jpg") || strstr(filename, ".gif") || strstr(filename, ".jpeg") || strstr(filename, ".png") || strstr(filename, ".webp")) 
     {
         destination_subdir = "Downloaded_Images";
-    } else if (strstr(filename, ".mp4") || strstr(filename, ".mkv") || strstr(filename, ".avi"))
+    } else if (strstr(filename, ".mp4") || strstr(filename, ".mkv") || strstr(filename, ".avi") || strstr(filename, ".mov"))
     {
         destination_subdir = "Downloaded_Videos";
     } else if (strstr(filename, ".mp3") || strstr(filename, ".wma") || strstr(filename, ".wav"))
