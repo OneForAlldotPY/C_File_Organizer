@@ -7,7 +7,7 @@ void move_file(const char *filename, const char *downloads_path){
     snprintf(source_path, sizeof(source_path), "%s\\%s", downloads_path, filename);
 
     const char *destination_subdir = NULL;
-    if (strstr(filename, ".jpg") || strstr(filename, ".gif") || strstr(filename, ".jpeg") || strstr(filename, ".png")) 
+    if (strstr(filename, ".jpg") || strstr(filename, ".gif") || strstr(filename, ".jpeg") || strstr(filename, ".png") || strstr(filename, ".webp")) 
     {
         destination_subdir = "Downloaded_Images";
     } else if (strstr(filename, ".mp4") || strstr(filename, ".mkv") || strstr(filename, ".avi"))
@@ -16,7 +16,7 @@ void move_file(const char *filename, const char *downloads_path){
     } else if (strstr(filename, ".mp3") || strstr(filename, ".wma") || strstr(filename, ".wav"))
     {
         destination_subdir = "Downloaded_Audios";
-    } else if (strstr(filename, ".rar") || strstr(filename, ".zip") || strstr(filename, ".tar"))
+    } else if (strstr(filename, ".rar") || strstr(filename, ".zip") || strstr(filename, ".tar") || strstr(filename, ".7z") || strstr(filename, "gz"))
     {
         destination_subdir = "Downloaded_CompressedFiles";
     } else if (strstr(filename, ".html") || strstr(filename, ".htm") || strstr (filename, ".asp") || strstr(filename, ".aspx"))
@@ -37,6 +37,9 @@ void move_file(const char *filename, const char *downloads_path){
     } else if (strstr(filename, ".bat") || strstr(filename, ".cmd") || strstr(filename, ".sh") || strstr(filename, ".ps1") || strstr(filename, ".pl") || strstr(filename, ".plist"))
     {
         destination_subdir = "Downloaded_CLIApplications";
+    } else if (strstr(filename, ".pem") || strstr(filename, ".crt") || strstr(filename, ".key"))
+    {
+        destination_subdir = "Downloaded_Certs";
     }
     
     if (destination_subdir) {
